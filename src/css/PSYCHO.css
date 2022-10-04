@@ -1,0 +1,320 @@
+body {
+  background-color: #dddddd;
+}
+
+h1 {
+  font-family: "Droid Sans";
+  padding: 10px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "Droid Sans";
+  padding: 10px;
+  padding-top: 10px;
+  margin-bottom: -10px;
+  font-size: 16px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+audio {
+  width: 100%;
+  height: 30px;
+  background: #dddddd;
+  background-color: rgb(66, 66, 66);
+}
+
+model-viewer {
+  width: 100%;
+  height: 500px;
+}
+
+input {
+  border: 1px solid #dddddd;
+}
+
+textarea:focus,
+input:focus {
+  background-color: #f1f3f4;
+  color: black;
+  outline: none;
+  font-size: 14px;
+}
+
+code {
+  font-size: 12px;
+  word-break: break-all;
+  background-color: #737373;
+}
+
+::placeholder {
+  color: #737373;
+}
+
+.unbreak {
+  word-break: normal !important;
+}
+
+.PSYCHO-center {
+  text-align: left;
+  margin: auto;
+  width: 500px;
+}
+
+.PSYCHO-divider {
+  margin-top: 10px;
+  height: 1px;
+  width: 100%;
+  background-color: #dddddd;
+}
+
+.PSYCHO-content {
+  background-color: rgb(66, 66, 66);
+  color: #dddddd;
+}
+
+.PSYCHO-logo {
+  height: auto;
+  width: auto;
+  max-width: 700px;
+}
+
+.PSYCHO-header-font {
+  font-family: "Droid Sans";
+  text-align: left;
+}
+
+.PSYCHO-header-logo-font {
+  font-family: "Arial Black", Arial-BoldMT;
+  padding-left: 80%;
+}
+
+.PSYCHO-header {
+  text-align: left;
+  background-color: #dddddd;
+  background-image: url("../media/white-mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 20vh;
+  color: rgb(0, 0, 0);
+  padding: 5px;
+}
+
+.PSYCHO-info {
+  font-family: "Droid Sans";
+  padding: 10px;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.PSYCHO-account {
+  font-family: "Droid Sans";
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.extensions-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.PSYCHO-model {
+  width: 5000px;
+}
+
+.input-extension {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #dddddd;
+  color: black;
+  font-size: 12px;
+}
+
+.input-id {
+  width: 54px;
+  margin-right: 5px;
+  text-align: center;
+  background-color: #dddddd;
+  color: black;
+}
+
+.input-info {
+  margin-right: 5px;
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  border: none;
+}
+
+.input-info-extensions {
+  margin-bottom: 10px;
+}
+
+.inner-subtract {
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+}
+
+.button-log {
+  margin-left: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  cursor: pointer;
+}
+
+.button-generate {
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  border: 1px solid white;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 5px;
+}
+
+.button-set {
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid white;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.button-generate:hover,
+.button-connect:hover,
+.button-set:hover {
+  background-color: rgb(80, 80, 80);
+}
+
+.no-margin {
+  margin-bottom: 0px !important;
+}
+
+.button-connect {
+  padding-right: 5px;
+  padding-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  border: 1px solid white;
+  background-color: rgb(66, 66, 66);
+  color: white;
+  cursor: pointer;
+  font-size: 28px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.account-details {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.metadata-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.data-wrap {
+  font-family: monospace;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #dedede;
+  word-break: break-word;
+  background-color: rgb(52, 52, 52);
+  height: 200px;
+  overflow: scroll;
+}
+
+.avatar-image {
+  margin-top: 15px;
+  margin-right: 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  height: 200px;
+}
+
+@media only screen and (max-width: 1420px) {
+  .PSYCHO-logo {
+    height: 8vmin;
+    max-width: none;
+  }
+
+  .PSYCHO-header-logo-font {
+    padding-left: 20vw;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .PSYCHO-info {
+    width: auto;
+  }
+
+  .PSYCHO-account {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .PSYCHO-center {
+    width: 100%;
+  }
+
+  .account-details {
+    font-size: 24px !important;
+  }
+}

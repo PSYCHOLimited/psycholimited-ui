@@ -4,6 +4,7 @@ import IERC721Metadata from "../abi/IERC721Metadata.json";
 import contract from "./address";
 import ethereum from "./ethereum";
 import base64 from "./base64";
+import model from "../../media/PSYCHO.glb";
 
 export default function Metadata() {
   const [avatarId, setAvatarId] = useState("");
@@ -119,12 +120,10 @@ export default function Metadata() {
           } else if (animation_url.startsWith("http")) {
             link = animation_url;
           } else {
-            link =
-              "https://nftstorage.link/ipfs/bafybeihmygiurvygn7oaruaz66njkvlicbfg7lnsc64ttxbc3o3x4fezfi";
+            link = model;
           }
         } else {
-          link =
-            "https://nftstorage.link/ipfs/bafybeihmygiurvygn7oaruaz66njkvlicbfg7lnsc64ttxbc3o3x4fezfi";
+          link = model;
         }
         setAnimationURI(link);
       }
@@ -139,9 +138,7 @@ export default function Metadata() {
         setImageURI(
           "https://nftstorage.link/ipfs/bafkreiedsq6thm636ofmsb4hkhzx2jcarnlca6lj6twjxm67ru4ndp4y3u"
         );
-        setAnimationURI(
-          "https://nftstorage.link/ipfs/bafybeihmygiurvygn7oaruaz66njkvlicbfg7lnsc64ttxbc3o3x4fezfi"
-        );
+        setAnimationURI(model);
       }
     };
     setOfflineData();

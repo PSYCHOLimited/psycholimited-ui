@@ -30,7 +30,7 @@ export default function Button() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <button className="button-connect">Create Wallet</button>
+          <button className="button-connect">Connect Wallet</button>
         </a>
       )}
     </React.Fragment>

@@ -7,12 +7,12 @@ import ethereum from "./ethereum";
 import info from "./connect/info";
 
 export default function Mint() {
-  const [message, setMessage] = useState("Mint Avatar");
+  const [message, setMessage] = useState("Generate");
   var buttonInfo = info();
 
   if (ethereum) {
     window.ethereum.on("accountsChanged", function (accounts) {
-      setMessage("Mint Avatar");
+      setMessage("Generate");
     });
   }
 
@@ -27,7 +27,7 @@ export default function Mint() {
           signer
         );
         const Auth = new ethers.Contract(contract, Owner.abi, signer);
-        if (message === "Mint Avatar") {
+        if (message === "Generate") {
           const stock = await PSYCHOLimited.stock();
           const stockString = stock.toString();
           const accounts = await window.ethereum.request({
@@ -50,9 +50,9 @@ export default function Mint() {
             const transaction = await PSYCHOLimited.mint(1, {
               value: fee.toString(),
             });
-            setMessage("Minting Avatar...");
+            setMessage("Generating...");
             await transaction.wait();
-            setMessage("Avatar Minted");
+            setMessage("Generated");
           } else {
             setMessage("Come Back Later");
           }
@@ -61,8 +61,7 @@ export default function Mint() {
         setMessage("Wallet Not Connected");
       }
     } catch (e) {
-      console.log(e);
-      setMessage("Cannot Mint Avatar");
+      setMessage("Cannot Generate");
       return;
     }
   }

@@ -117,8 +117,8 @@ function PSYCHO() {
             <br />
             <br />
             PSYCHO Limited UI:{" "}
-            <a href="https://dweb.link/ipfs/bafybeigkod7kougyjctkrm7ykhevl32s5nunq35kdkobj7jbpjbv3fjc3a" target="_blank" rel="noreferrer">
-              bafybeigkod7kougyjctkrm7ykhevl32s5nunq35kdkobj7jbpjbv3fjc3a
+            <a href="https://dweb.link/ipfs/bafybeiaqxooikjotaqlql6ktp3f6cz3j5pw57wyogeooknr6spfvdefv34" target="_blank" rel="noreferrer">
+              bafybeiaqxooikjotaqlql6ktp3f6cz3j5pw57wyogeooknr6spfvdefv34
             </a>
             <br />
             <br />

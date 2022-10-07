@@ -9,23 +9,15 @@ import info from "./connect/info";
 
 export default function Extension() {
   const [avatarId, setAvatarId] = useState("");
-  const [jsonMessage, setJsonMessage] = useState("Set JSON For Avatar ");
-  const [resetMessage, setResetMessage] = useState("Reset Avatar ");
+  const [jsonMessage, setJsonMessage] = useState("Set Avatar Metadata");
+  const [resetMessage, setResetMessage] = useState("Reset");
   const [jsonContent, setJsonContent] = useState("");
   var buttonInfo = info();
 
-  function avatar(id) {
-    if (id === "") {
-      return 0;
-    } else {
-      return id;
-    }
-  }
-
   if (ethereum) {
     window.ethereum.on("accountsChanged", function (accounts) {
-      setJsonMessage("Set JSON For Avatar ");
-      setResetMessage("Reset Avatar ");
+      setJsonMessage("Set Avatar Metadata");
+      setResetMessage("Reset");
     });
   }
 
@@ -40,7 +32,7 @@ export default function Extension() {
           signer
         );
         const Auth = new ethers.Contract(contract, Owner.abi, signer);
-        if (jsonMessage === "Set JSON For Avatar ") {
+        if (jsonMessage === "Set Avatar Metadata") {
           var fee;
           const approved = await Auth.getApprovedOwner();
           const ownership = await Auth.owner();
@@ -58,15 +50,15 @@ export default function Extension() {
             jsonContent,
             { value: fee.toString() }
           );
-          setJsonMessage("Configuring Avatar ");
+          setJsonMessage("Setting Metadata...");
           await transaction.wait();
-          setJsonMessage("Configured Avatar ");
+          setJsonMessage("Avatar Metadata Set");
         }
       } else {
-        setJsonMessage("Connect To Interact With Avatar ");
+        setJsonMessage("Connect To Interact");
       }
     } catch (e) {
-      setJsonMessage("Cannot Set JSON For Avatar ");
+      setJsonMessage("Cannot Set Metadata");
       return;
     }
   }
@@ -81,20 +73,20 @@ export default function Extension() {
           IPSYCHOLimited.abi,
           signer
         );
-        if (resetMessage === "Reset Avatar ") {
+        if (resetMessage === "Reset") {
           const fee = await PSYCHOLimited.fee(1);
           const transaction = await PSYCHOLimited.metadata(avatarId, "", {
             value: fee.toString(),
           });
-          setResetMessage("Configuring Avatar ");
+          setResetMessage("Resetting...");
           await transaction.wait();
-          setResetMessage("Configured Avatar ");
+          setResetMessage("Avatar Has Reset");
         }
       } else {
-        setResetMessage("Connect To Interact With Avatar ");
+        setResetMessage("Connect To Interact");
       }
     } catch (e) {
-      setResetMessage("Cannot Reset Avatar ");
+      setResetMessage("Cannot Reset");
       return;
     }
   }
@@ -115,13 +107,13 @@ export default function Extension() {
           className="input-extension"
           value={jsonContent}
           onChange={(e) => setJsonContent(e.target.value)}
-          placeholder="Paste JSON Extension Here"
+          placeholder="Paste JSON Here"
         />
         <button className="button-set" onClick={setExtension}>
-          {jsonMessage.concat(avatar(avatarId))}
+          {jsonMessage}
         </button>
         <button className="button-set no-margin" onClick={reset}>
-          {resetMessage.concat(avatar(avatarId))}
+          {resetMessage}
         </button>
       </div>
     </React.Fragment>

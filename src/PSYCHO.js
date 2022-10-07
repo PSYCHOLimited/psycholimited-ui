@@ -51,10 +51,10 @@ function PSYCHO() {
           <h1>Account</h1>
           <div className="PSYCHO-account">{Account()}</div>
           <div className="PSYCHO-divider" />
-          <h1>Mint</h1>
+          <h1>Create Avatar</h1>
           <div className="PSYCHO-info">
-            Limited to a total supply of 1101 and public supply of 1001. Avatars
-            are generated using on-chain data. Generate fee is {Fee()} ETH.
+            Connect your wallet and generate to mint an avatar. Limited to a
+            total supply of 1101. Fee to generate is {Fee()} ETH.
           </div>
           <div className="PSYCHO-info">{Generate()}</div>
           <div className="PSYCHO-divider" />
@@ -65,19 +65,36 @@ function PSYCHO() {
           </div>
           {Metadata()}
           <div className="PSYCHO-divider" />
-          <h1>JSON</h1>
+          <h1>Set Avatar Metadata</h1>
           <div className="PSYCHO-info">
             Paste the json snippet into the input field below to set the image,
             animation_url, and more. You cannot set the properties for the name,
-            description, or attributes because they are perminent. Use{" "}
-            <b>ipfs://</b> or <b>ipns://</b> if using IPFS. Check desired
-            marketplaces and social media for supported file types. A correct
-            input looks like{" "}
+            description, or attributes because they are perminent. Check desired
+            marketplaces and social media for supported file types.
+            <br />
+            <br />
+            Example JSON input for an image on IPFS looks like:
+            <br />
             <code>
               "image":"ipfs://bafybeidob7iaynjg6h6c3igqnac2qnprlzsfatybuqkxhcizcgpfowwgm4"
             </code>
-            . Make sure to exclude <code>&#123;&#125;</code> at each end. You
-            may also reset the metadata properties to the default data.
+            <br />
+            <br />
+            Click below to copy the image metadata template:
+            <br />
+            <code
+              className="cursor"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  '"image":"add_direct_link_to_image_here"'
+                );
+              }}
+            >
+              "image":"add_direct_link_to_image_here"
+            </code>
+            <br />
+            <br />
+            You may use any hosting, including IPFS, Dropbox, Drive, or others.
           </div>
           <div className="PSYCHO-info">{Extension()}</div>
           <div className="PSYCHO-divider" />
@@ -85,9 +102,7 @@ function PSYCHO() {
           <div className="PSYCHO-info">
             This web3 app cannot be tampered with and exists on IPFS. Pin the
             content identifier to support this UI. The smart contract ABI for UI
-            building is provided below and the contract source code for
-            reference. JSON extensions can be designed to point at dynamic
-            avatar programs.
+            building and the contract source code are provided below.
           </div>
           <h2>Source Code</h2>
           <div className="PSYCHO-info">
@@ -102,12 +117,8 @@ function PSYCHO() {
             <br />
             <br />
             PSYCHO Limited UI:{" "}
-            <a
-              href="https://dweb.link/ipfs/bafybeiefykr7cemrk4ny3yh2w7lbylr4z4bncbhc7yrvcg47z7mfetsaxm"
-              target="_blank"
-              rel="noreferrer"
-            >
-              bafybeiefykr7cemrk4ny3yh2w7lbylr4z4bncbhc7yrvcg47z7mfetsaxm
+            <a href="https://dweb.link/ipfs/" target="_blank" rel="noreferrer">
+              null
             </a>
             <br />
             <br />

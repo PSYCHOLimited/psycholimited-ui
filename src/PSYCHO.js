@@ -33,8 +33,8 @@ function PSYCHO() {
           <h1>Abstract</h1>
           <div className="PSYCHO-info">
             PSYCHO Limited is a network of 1101 fashionable avatars. Owners are
-            considered part of the PSYCHO net and can set unique json for their
-            avatars. Compared to minting on the OpenSea Shared Storefront
+            considered part of the PSYCHO net and can set unique metadata for
+            their avatars. Compared to minting on the OpenSea Shared Storefront
             contract, there are only 1101 ERC721 tokens with an emphasis on art
             and fashion. The project is made for collaboration between the
             owners and program.

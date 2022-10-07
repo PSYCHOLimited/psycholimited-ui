@@ -54,7 +54,7 @@ function PSYCHO() {
           <h1>Create Avatar</h1>
           <div className="PSYCHO-info">
             Connect your wallet and generate to mint an avatar. Limited to a
-            total supply of 1101. Fee to generate is {Fee()} ETH.
+            total supply of 1101 for {Fee()} ETH per avatar.
           </div>
           <div className="PSYCHO-info">{Generate()}</div>
           <div className="PSYCHO-divider" />
@@ -73,15 +73,17 @@ function PSYCHO() {
             marketplaces and social media for supported file types.
             <br />
             <br />
-            Example JSON input for an image on IPFS looks like:
-            <br />
+            <div className="margin-bottom-5px">
+              Example JSON input for an image on IPFS looks like:
+            </div>
             <code>
               "image":"ipfs://bafybeidob7iaynjg6h6c3igqnac2qnprlzsfatybuqkxhcizcgpfowwgm4"
             </code>
             <br />
             <br />
-            Click below to copy the image metadata template:
-            <br />
+            <div className="margin-bottom-5px">
+              Click to copy the image metadata template:
+            </div>
             <code
               className="cursor"
               onClick={() => {
@@ -106,23 +108,30 @@ function PSYCHO() {
           </div>
           <h2>Source Code</h2>
           <div className="PSYCHO-info">
-            PSYCHO Limited:{" "}
+            <div className="margin-bottom-3px">Smart Contract:</div>
             <a
-              href="https://dweb.link/ipfs/bafybeihok62sxetpko6s5ydov5sgy7wdnpo6ycqvrfn5vbkeom5cwujn2a"
+              className="margin-bottom"
+              href="https://etherscan.io/address/0xBabcD60567D66E7C1e443C0F7a0426381908787f"
               target="_blank"
               rel="noreferrer"
             >
-              bafybeihok62sxetpko6s5ydov5sgy7wdnpo6ycqvrfn5vbkeom5cwujn2a
+              0xBabcD60567D66E7C1e443C0F7a0426381908787f
             </a>
             <br />
             <br />
-            PSYCHO Limited UI:{" "}
-            <a href="https://dweb.link/ipfs/bafybeiaqxooikjotaqlql6ktp3f6cz3j5pw57wyogeooknr6spfvdefv34" target="_blank" rel="noreferrer">
-              bafybeiaqxooikjotaqlql6ktp3f6cz3j5pw57wyogeooknr6spfvdefv34
-            </a>
+            <div className="margin-bottom-3px">User Interface:</div>
+            <div
+              className="copy"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  "git clone git@github.com:psycholimited/psycholimited-ui"
+                );
+              }}
+            >
+              git clone git@github.com:psycholimited/psycholimited-ui
+            </div>
             <br />
-            <br />
-            Network Default:{" "}
+            <div className="margin-bottom-3px">Network GIF Image: </div>
             <a
               href="https://nftstorage.link/ipfs/bafybeidob7iaynjg6h6c3igqnac2qnprlzsfatybuqkxhcizcgpfowwgm4"
               target="_blank"
@@ -132,26 +141,17 @@ function PSYCHO() {
             </a>
             <br />
             <br />
-            Network Awareness:{" "}
+            <div className="margin-bottom-3px">Network glTF Model: </div>
             <a
-              href="https://nftstorage.link/ipfs/bafybeihmygiurvygn7oaruaz66njkvlicbfg7lnsc64ttxbc3o3x4fezfi"
+              href="https://nftstorage.link/ipfs/bafybeiavfdgoywozugwlbafrorlmgxz4degqbuifiqycmiz5twiftbmsnu"
               target="_blank"
               rel="noreferrer"
             >
-              bafybeihmygiurvygn7oaruaz66njkvlicbfg7lnsc64ttxbc3o3x4fezfi
+              bafybeiavfdgoywozugwlbafrorlmgxz4degqbuifiqycmiz5twiftbmsnu
             </a>
           </div>
           <div className="PSYCHO-divider" />
-          <div className="PSYCHO-info">
-            Contract Address:{" "}
-            <a
-              href="https://etherscan.io/address/0xBabcD60567D66E7C1e443C0F7a0426381908787f"
-              target="_blank"
-              rel="noreferrer"
-            >
-              0xBabcD60567D66E7C1e443C0F7a0426381908787f
-            </a>
-          </div>
+          <div className="PSYCHO-info footer">AGPL-3.0-only</div>
         </div>
       </div>
     </Fragment>

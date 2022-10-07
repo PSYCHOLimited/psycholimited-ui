@@ -5,7 +5,6 @@ body {
 h1 {
   font-family: "Droid Sans";
   padding: 10px;
-  padding-top: 10px;
   margin-bottom: -10px;
   font-size: 20px;
 }
@@ -13,29 +12,30 @@ h1 {
 h2 {
   font-family: "Droid Sans";
   padding: 10px;
-  padding-top: 10px;
   margin-bottom: -10px;
   font-size: 16px;
 }
 
 a:link {
-  color: white;
+  color: #dddddd;
   text-decoration: none;
+  font-size: 16px;
 }
 
 a:visited {
+  color: #dddddd;
+  text-decoration: none;
+}
+
+a:hover,
+.copy:hover {
   color: white;
   text-decoration: none;
 }
 
-a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
 a:active {
-  color: white;
-  text-decoration: underline;
+  color: #dddddd;
+  text-decoration: none;
 }
 
 audio {
@@ -72,6 +72,20 @@ code {
 
 ::placeholder {
   color: #737373;
+}
+
+.margin-bottom-5px {
+  margin-bottom: 5px !important;
+}
+
+.margin-bottom-3px {
+  margin-bottom: 3px !important;
+}
+
+.copy {
+  color: #dddddd;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .cursor {
@@ -294,6 +308,10 @@ code {
   height: 200px;
 }
 
+.footer {
+  text-align: center !important;
+}
+
 @media only screen and (max-width: 1420px) {
   .PSYCHO-logo {
     height: 8vmin;
@@ -322,5 +340,13 @@ code {
 
   .account-details {
     font-size: 24px !important;
+  }
+
+  a:link {
+    font-size: 15px !important;
+  }
+
+  .copy {
+    font-size: 15px !important;
   }
 }

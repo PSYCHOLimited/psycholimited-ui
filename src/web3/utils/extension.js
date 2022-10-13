@@ -109,10 +109,10 @@ export default function Extension() {
           onChange={(e) => setJsonContent(e.target.value)}
           placeholder="Paste JSON Here"
         />
-        <button className="button-set" onClick={setExtension}>
+        <button className="button-small" onClick={setExtension}>
           {jsonMessage}
         </button>
-        <button className="button-set no-margin" onClick={reset}>
+        <button className="button-small no-margin" onClick={reset}>
           {resetMessage}
         </button>
       </div>

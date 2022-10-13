@@ -68,7 +68,7 @@ export default function Mint() {
 
   return (
     <React.Fragment>
-      <button className="button-generate" onClick={mint}>
+      <button className="button-large" onClick={mint}>
         {message}
       </button>
     </React.Fragment>

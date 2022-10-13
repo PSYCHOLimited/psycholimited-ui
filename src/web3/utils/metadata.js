@@ -146,9 +146,7 @@ export default function Metadata() {
 
   return (
     <React.Fragment>
-      <button className="input-info">
-        Type an Avatar ID to Read Blockchain:
-      </button>
+      <button className="input-info">Type an Avatar ID to View Content:</button>
       <input
         className="input-id"
         value={avatarId}

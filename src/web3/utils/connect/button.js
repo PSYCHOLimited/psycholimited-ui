@@ -16,7 +16,7 @@ export default function Button() {
   return (
     <React.Fragment>
       {ethereum && (
-        <button className="button-connect" onClick={connect}>
+        <button className="button-large" onClick={connect}>
           {info()}
         </button>
       )}
@@ -30,7 +30,7 @@ export default function Button() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <button className="button-connect">Connect Wallet</button>
+          <button className="button-large">Connect Wallet</button>
         </a>
       )}
     </React.Fragment>

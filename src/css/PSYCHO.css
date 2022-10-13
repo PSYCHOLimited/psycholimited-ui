@@ -165,6 +165,12 @@ code {
   width: 5000px;
 }
 
+.PSYCHO-link {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: auto !important;
+}
+
 .input-extension {
   width: 100%;
   text-align: center;
@@ -217,7 +223,7 @@ code {
   cursor: pointer;
 }
 
-.button-generate {
+.button-large {
   padding-right: 5px;
   padding-left: 5px;
   text-align: center;
@@ -231,7 +237,7 @@ code {
   padding: 5px;
 }
 
-.button-set {
+.button-small {
   padding-right: 5px;
   padding-left: 5px;
   text-align: center;
@@ -244,29 +250,13 @@ code {
   padding: 10px;
 }
 
-.button-generate:hover,
-.button-connect:hover,
-.button-set:hover {
+.button-large:hover,
+.button-small:hover {
   background-color: rgb(80, 80, 80);
 }
 
 .no-margin {
   margin-bottom: 0px !important;
-}
-
-.button-connect {
-  padding-right: 5px;
-  padding-left: 5px;
-  text-align: center;
-  font-weight: bold;
-  width: 100%;
-  border: 1px solid white;
-  background-color: rgb(66, 66, 66);
-  color: white;
-  cursor: pointer;
-  font-size: 28px;
-  padding: 5px;
-  margin-bottom: 5px;
 }
 
 .account-details {

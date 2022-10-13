@@ -32,21 +32,43 @@ function PSYCHO() {
           </audio>
           <h1>Abstract</h1>
           <div className="PSYCHO-info">
-            PSYCHO Limited is a network of 1101 fashionable avatars. Owners are
-            considered part of the PSYCHO net and can set unique metadata for
-            their avatars. Compared to minting on the OpenSea Shared Storefront
-            contract, there are only 1101 ERC721 tokens with an emphasis on art
-            and fashion. The project is made for collaboration between the
-            owners and program.
+            PSYCHO Limited is a network of fashionable avatars. Avatars can be
+            purchased on secondary markets such as SudoSwap and are designed by
+            program collaborators for a fee. The network is limited to 1101 avatars.
           </div>
           <div className="PSYCHO-divider" />
-          <h1>Attributes</h1>
+          <h1>Purchase Avatar</h1>
           <div className="PSYCHO-info">
-            Avatars have one attribute, the block number. The more bottleneck
-            there is during minting, the less potential there is for rare
-            avatars to be created. The rarest avatars are distributed the
-            farthest from any blocks.
+            The easiest way to obtain an avatar is by purchasing a
+            pre-configured one on a secondary marketplace. Use SudoSwap below to
+            purchase an avatar.
           </div>
+          <a
+            href="https://sudoswap.xyz/#/browse/buy/0xBabcD60567D66E7C1e443C0F7a0426381908787f"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="PSYCHO-link button-large">SudoSwap Sale</div>
+          </a>
+          <div className="PSYCHO-divider" />
+          <h1>OpenSea Collection</h1>
+          <div className="PSYCHO-info">
+            View the PSYCHO Limited collection on OpenSea.
+          </div>
+          <a
+            href="https://opensea.io/collection/psycholimited"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="PSYCHO-link button-large">OpenSea Collection</div>
+          </a>
+          <div className="PSYCHO-divider" />
+          <h1>Metadata Interface</h1>
+          <div className="PSYCHO-info">
+            Use this interface to view avatar media when connected to an
+            Ethereum provider. Type an ID to load content.
+          </div>
+          {Metadata()}
           <div className="PSYCHO-divider" />
           <h1>Account</h1>
           <div className="PSYCHO-account">{Account()}</div>
@@ -54,16 +76,10 @@ function PSYCHO() {
           <h1>Create Avatar</h1>
           <div className="PSYCHO-info">
             Connect your wallet and generate to mint an avatar. Limited to a
-            total supply of 1101 for {Fee()} ETH per avatar.
+            total supply of 1101 for {Fee()} ETH per addition to the collection.
+            Total cost after configuration is {Fee() * 2} ETH.
           </div>
           <div className="PSYCHO-info">{Generate()}</div>
-          <div className="PSYCHO-divider" />
-          <h1>Metadata</h1>
-          <div className="PSYCHO-info">
-            Use this tool to read and view avatar media. Type an ID to load
-            content.
-          </div>
-          {Metadata()}
           <div className="PSYCHO-divider" />
           <h1>Set Avatar Metadata</h1>
           <div className="PSYCHO-info">

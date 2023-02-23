@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Fee from "./web3/utils/fee";
 import Account from "./web3/utils/account";
+import Contract from "./web3/utils/address";
 import Generate from "./web3/utils/mint";
 import Extension from "./web3/utils/extension";
 import Metadata from "./web3/utils/metadata";
@@ -35,7 +36,7 @@ function PSYCHO() {
 						PSYCHO Limited is a network of fashionable avatars. Avatars can be
 						purchased on secondary markets such as SudoSwap and are designed by
 						program collaborators for a fee. The network is limited to 1101
-						avatars.
+						avatars. Connect to the Ethereum network to load this app properly.
 					</div>
 					<div className="PSYCHO-divider" />
 					<h1>Purchase Avatar</h1>
@@ -78,7 +79,7 @@ function PSYCHO() {
 					<div className="PSYCHO-info">
 						Connect your wallet and generate to mint an avatar. Limited to a
 						total supply of 1101 for {Fee()} ETH per addition to the collection.
-						Total cost after configuration is {Fee() * 2} ETH.
+						Total cost including metadata configuration is {Fee() * 2} ETH.
 					</div>
 					<div className="PSYCHO-info">{Generate()}</div>
 					<div className="PSYCHO-divider" />
@@ -128,11 +129,11 @@ function PSYCHO() {
 						<div className="margin-bottom-3px">Smart Contract:</div>
 						<a
 							className="margin-bottom"
-							href="https://etherscan.io/address/0xBabcD60567D66E7C1e443C0F7a0426381908787f"
+							href={`https://etherscan.io/address/${Contract}`}
 							target="_blank"
 							rel="noreferrer"
 						>
-							0xBabcD60567D66E7C1e443C0F7a0426381908787f
+							{Contract}
 						</a>
 						<br />
 						<br />

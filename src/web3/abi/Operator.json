@@ -1,0 +1,160 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "Operator",
+  "sourceName": "@0xver/solver/auth/extensions/Operator.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        }
+      ],
+      "name": "NonOperator",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        }
+      ],
+      "name": "NonOwnership",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "TransferOwnershipToZeroAddress",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "OperatorshipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "operator",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "transferOperatorship",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161037b38038061037b83398101604081905261002f91610098565b6100388161003e565b506100c6565b600080546001600160a01b038381166001600160a01b031980841682178555600180549091169055604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b6000602082840312156100a9578081fd5b81516001600160a01b03811681146100bf578182fd5b9392505050565b6102a6806100d56000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80634a6a42d814610051578063570ca735146100665780638da5cb5b1461008f578063f2fde38b146100a0575b600080fd5b61006461005f366004610242565b6100b3565b005b6001546001600160a01b03165b6040516001600160a01b03909116815260200160405180910390f35b6000546001600160a01b0316610073565b6100646100ae366004610242565b61011d565b336100c66000546001600160a01b031690565b6001600160a01b031614610111576000546001600160a01b03165b604051630687613f60e31b81526001600160a01b0390911660048201523360248201526044015b60405180910390fd5b61011a81610196565b50565b336101306000546001600160a01b031690565b6001600160a01b03161461014f576000546001600160a01b03166100e1565b6001600160a01b03811661018d57600054604051637206a3a160e01b81526001600160a01b0391821660048201529082166024820152604401610108565b61011a816101e8565b600180546001600160a01b038381166001600160a01b0319831681179093556040519116919082907fb37ff92c23eca455dbbd028d9cb869f69e16485d5ef15286fc394c721a5d5dc190600090a35050565b600080546001600160a01b038381166001600160a01b031980841682178555600180549091169055604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b600060208284031215610253578081fd5b81356001600160a01b0381168114610269578182fd5b939250505056fea2646970667358221220eb1c29079f3dc481334e07beac8dcf9c56b0d75d7bfb7a048deb6017327b048464736f6c63430008040033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80634a6a42d814610051578063570ca735146100665780638da5cb5b1461008f578063f2fde38b146100a0575b600080fd5b61006461005f366004610242565b6100b3565b005b6001546001600160a01b03165b6040516001600160a01b03909116815260200160405180910390f35b6000546001600160a01b0316610073565b6100646100ae366004610242565b61011d565b336100c66000546001600160a01b031690565b6001600160a01b031614610111576000546001600160a01b03165b604051630687613f60e31b81526001600160a01b0390911660048201523360248201526044015b60405180910390fd5b61011a81610196565b50565b336101306000546001600160a01b031690565b6001600160a01b03161461014f576000546001600160a01b03166100e1565b6001600160a01b03811661018d57600054604051637206a3a160e01b81526001600160a01b0391821660048201529082166024820152604401610108565b61011a816101e8565b600180546001600160a01b038381166001600160a01b0319831681179093556040519116919082907fb37ff92c23eca455dbbd028d9cb869f69e16485d5ef15286fc394c721a5d5dc190600090a35050565b600080546001600160a01b038381166001600160a01b031980841682178555600180549091169055604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b600060208284031215610253578081fd5b81356001600160a01b0381168114610269578182fd5b939250505056fea2646970667358221220eb1c29079f3dc481334e07beac8dcf9c56b0d75d7bfb7a048deb6017327b048464736f6c63430008040033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

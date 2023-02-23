@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import IPSYCHOLimited from "../abi/IPSYCHOLimited.json";
-import Owner from "../abi/Owner.json";
+import Owner from "../abi/Operator.json";
 import contract from "./address";
 import ethereum from "./ethereum";
 import info from "./connect/info";
@@ -34,15 +34,15 @@ export default function Mint() {
 						method: "eth_accounts"
 					});
 					const account = ethers.utils.getAddress(accounts[0]);
-					const approved = await Auth.getApprovedOwner();
+					const operator = await Auth.operator();
 					const ownership = await Auth.owner();
 					if (
 						stockString !== "0" ||
-						approved === account ||
+						operator === account ||
 						ownership === account
 					) {
 						var fee;
-						if (approved === account || ownership === account) {
+						if (operator === account || ownership === account) {
 							fee = 0;
 						} else {
 							fee = await PSYCHOLimited.fee(1);
@@ -61,6 +61,7 @@ export default function Mint() {
 				setMessage("Wallet Not Connected");
 			}
 		} catch (e) {
+			console.log(e)
 			setMessage("Cannot Generate");
 			return;
 		}

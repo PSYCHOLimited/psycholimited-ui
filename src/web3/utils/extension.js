@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ethers } from "ethers";
 import IPSYCHOLimited from "../abi/IPSYCHOLimited.json";
-import Owner from "../abi/Owner.json";
+import Owner from "../abi/Operator.json";
 import Fee from "./fee";
 import contract from "./address";
 import ethereum from "./ethereum";

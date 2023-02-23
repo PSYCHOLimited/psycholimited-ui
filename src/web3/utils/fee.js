@@ -18,7 +18,7 @@ export default function Fee() {
 				);
 				const fee = await PSYCHOLimited.fee(1);
 				const ethFee = ethers.utils.formatEther(fee.toString());
-				setFee(~~ethFee);
+				setFee(ethFee);
 			}
 		};
 		getFee();

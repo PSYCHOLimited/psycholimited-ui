@@ -5,7 +5,7 @@ import PSYCHO from "./PSYCHO";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <PSYCHO />
-  </React.StrictMode>
+	<React.StrictMode>
+		<PSYCHO />
+	</React.StrictMode>
 );

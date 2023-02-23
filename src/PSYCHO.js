@@ -39,20 +39,6 @@ function PSYCHO() {
 						avatars. Connect to the Ethereum network to load this app properly.
 					</div>
 					<div className="PSYCHO-divider" />
-					<h1>Purchase Avatar</h1>
-					<div className="PSYCHO-info">
-						The easiest way to obtain an avatar is by purchasing a
-						pre-configured one on a secondary marketplace. Use SudoSwap below to
-						purchase an avatar.
-					</div>
-					<a
-						href="https://sudoswap.xyz/#/browse/buy/0xBabcD60567D66E7C1e443C0F7a0426381908787f"
-						target="_blank"
-						rel="noreferrer"
-					>
-						<div className="PSYCHO-link button-large">SudoSwap Sale</div>
-					</a>
-					<div className="PSYCHO-divider" />
 					<h1>OpenSea Collection</h1>
 					<div className="PSYCHO-info">
 						View the PSYCHO Limited collection on OpenSea.

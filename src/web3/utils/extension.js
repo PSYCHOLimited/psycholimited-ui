@@ -34,13 +34,13 @@ export default function Extension() {
 				const Auth = new ethers.Contract(contract, Owner.abi, signer);
 				if (jsonMessage === "Set Avatar Metadata") {
 					var fee;
-					const approved = await Auth.getApprovedOwner();
+					const operator = await Auth.operator();
 					const ownership = await Auth.owner();
 					const accounts = await window.ethereum.request({
 						method: "eth_accounts"
 					});
 					const account = ethers.utils.getAddress(accounts[0]);
-					if (approved === account || ownership === account) {
+					if (operator === account || ownership === account) {
 						fee = 0;
 					} else {
 						fee = await PSYCHOLimited.fee(1);

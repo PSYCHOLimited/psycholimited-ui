@@ -162,8 +162,8 @@ export default function Metadata() {
 			<h2>VR/AR</h2>
 			<div className="PSYCHO-info">
 				By default each avatar points to the network emblem (482.5 KB) and can
-				load into augmented reality. Custom VR/AR models can be set using a glTF
-				file format in the "animation_url" json property.
+				load into augmented reality. VR/AR models can be set using a glTF
+				file format for the "animation" argument of metadata (COMING SOON).
 			</div>
 			<model-viewer
 				src={animationURI}

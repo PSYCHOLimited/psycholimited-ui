@@ -9,14 +9,14 @@ import info from "./connect/info";
 
 export default function Extension() {
 	const [avatarId, setAvatarId] = useState("");
-	const [jsonMessage, setJsonMessage] = useState("Set Avatar Metadata");
+	const [urlMessage, setUrlMessage] = useState("Set Avatar Image");
 	const [resetMessage, setResetMessage] = useState("Reset");
-	const [jsonContent, setJsonContent] = useState("");
+	const [urlContent, setUrlContent] = useState("");
 	var buttonInfo = info();
 
 	if (ethereum) {
 		window.ethereum.on("accountsChanged", function (accounts) {
-			setJsonMessage("Set Avatar Metadata");
+			setUrlMessage("Set Avatar Image");
 			setResetMessage("Reset");
 		});
 	}
@@ -32,7 +32,7 @@ export default function Extension() {
 					signer
 				);
 				const Auth = new ethers.Contract(contract, Owner.abi, signer);
-				if (jsonMessage === "Set Avatar Metadata") {
+				if (urlMessage === "Set Avatar Image") {
 					var fee;
 					const operator = await Auth.operator();
 					const ownership = await Auth.owner();
@@ -47,18 +47,19 @@ export default function Extension() {
 					}
 					const transaction = await PSYCHOLimited.metadata(
 						avatarId,
-						jsonContent,
+						`"${urlContent}"`,
+						"",
 						{ value: fee.toString() }
 					);
-					setJsonMessage("Setting Metadata...");
+					setUrlMessage("Setting Image...");
 					await transaction.wait();
-					setJsonMessage("Avatar Metadata Set");
+					setUrlMessage("Avatar Image Has Been Set");
 				}
 			} else {
-				setJsonMessage("Connect To Interact");
+				setUrlMessage("Connect To Interact");
 			}
 		} catch (e) {
-			setJsonMessage("Cannot Set Metadata");
+			setUrlMessage("Cannot Set Image");
 			return;
 		}
 	}
@@ -75,12 +76,12 @@ export default function Extension() {
 				);
 				if (resetMessage === "Reset") {
 					const fee = await PSYCHOLimited.fee(1);
-					const transaction = await PSYCHOLimited.metadata(avatarId, "", {
+					const transaction = await PSYCHOLimited.metadata(avatarId, "", "", {
 						value: fee.toString()
 					});
 					setResetMessage("Resetting...");
 					await transaction.wait();
-					setResetMessage("Avatar Has Reset");
+					setResetMessage("Avatar Has Been Reset");
 				}
 			} else {
 				setResetMessage("Connect To Interact");
@@ -105,12 +106,12 @@ export default function Extension() {
 			<div className="extensions-container">
 				<input
 					className="input-extension"
-					value={jsonContent}
-					onChange={(e) => setJsonContent(e.target.value)}
-					placeholder="Paste JSON Here"
+					value={urlContent}
+					onChange={(e) => setUrlContent(e.target.value)}
+					placeholder="Paste Image URL Here"
 				/>
 				<button className="button-small" onClick={setExtension}>
-					{jsonMessage}
+					{urlMessage}
 				</button>
 				<button className="button-small no-margin" onClick={reset}>
 					{resetMessage}

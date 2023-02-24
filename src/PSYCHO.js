@@ -63,9 +63,8 @@ function PSYCHO() {
 					<div className="PSYCHO-divider" />
 					<h1>Create Avatar</h1>
 					<div className="PSYCHO-info">
-						Connect your wallet and generate to mint an avatar. Limited to a
-						total supply of 1101 for {Fee()} ETH per addition to the collection.
-						Total cost including metadata configuration is {Fee() * 2} ETH.
+						Connect your wallet to mint an avatar token. Limited to a
+						total supply of 1101 avatars. {Fee()} ETH per addition to the collection.
 					</div>
 					<div className="PSYCHO-info">{Generate()}</div>
 					<div className="PSYCHO-divider" />
@@ -78,25 +77,10 @@ function PSYCHO() {
 						<br />
 						<br />
 						<div className="margin-bottom-5px">
-							Example JSON input for an image on IPFS looks like:
+							Example URL input for an image on IPFS looks like:
 						</div>
 						<code>
-							"image":"ipfs://bafybeidob7iaynjg6h6c3igqnac2qnprlzsfatybuqkxhcizcgpfowwgm4"
-						</code>
-						<br />
-						<br />
-						<div className="margin-bottom-5px">
-							Click to copy the image metadata template:
-						</div>
-						<code
-							className="cursor"
-							onClick={() => {
-								navigator.clipboard.writeText(
-									'"image":"add_direct_link_to_image_here"'
-								);
-							}}
-						>
-							"image":"add_direct_link_to_image_here"
+							ipfs://bafybeidob7iaynjg6h6c3igqnac2qnprlzsfatybuqkxhcizcgpfowwgm4
 						</code>
 						<br />
 						<br />

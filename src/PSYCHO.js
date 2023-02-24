@@ -15,7 +15,7 @@ function PSYCHO() {
 			<div className="PSYCHO-center">
 				<header className="PSYCHO-header">
 					<div className="PSYCHO-header-font">
-						Ethereum (Block #16690138)<br/>
+						Ethereum (Block #16694968)<br/>
 						{Contract}
 					</div>
 					<img src={logo} className="PSYCHO-logo" alt="logo" />
